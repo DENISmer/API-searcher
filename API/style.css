@@ -1,0 +1,47 @@
+.style {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  width:300px;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:15px;
+}
+img{
+  position: fixed;
+  top: 200px;
+  right: 165px;
+}
+.weather{
+	margin: 0 auto;
+	color: darkcyan;
+	font-size: 70px;
+    font-family: Impact, cursive;
+    text-shadow: 1px 2px black;
+}
+.button {
+  position: fixed;
+  right: 240px;
+  top: 150px;
+  border-radius: 12px;
+  height:30px;
+  border:0;
+  background-color: cyan;
+}
+h1 {
+	color: darkviolet;
+    font-family: Bradley Hand, cursive;
+    text-shadow: 1px 2px black;
+}
+h2 {
+	color: darkcyan;
+    font-family: Bradley Hand, cursive;
+    text-shadow: 1px 2px black;
+}
+.back {
+height: 1000px;
+background: linear-gradient(to top left, powderblue, pink);
+}
