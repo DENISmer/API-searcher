@@ -1,18 +1,36 @@
 let city;
 
 async function Sear(){
+	let regexp = /^[a-z\s]+$/i;
 	let spinner = document.getElementById("spin");
-	spinner.style.display = "inline";
+	
 
 	city = document.getElementById('search');
-	let url = `https://goweather.herokuapp.com/weather/${city.value}`;
 
-	let response = await fetch(url);
-	let data = await response.json();
+	if(regexp.test(city.value)){
+		spinner.style.display = "inline";
+		let url = `https://goweather.herokuapp.com/weather/${city.value}`;
 
-	p(data);
-
-	spinner.style.display = "none";
+		let response = await fetch(url);
+		let data = await response.json();
+		if(data.temperature == ""){
+			alert("Not found");
+			spinner.style.display = "none";
+			return;
+		}
+		try{
+			p(data);
+		}
+		catch{
+			alert("Неверно введен город;")
+		}
+	}
+	else{
+		alert("Input Error");
+		spinner.style.display = "none";
+	}
+	
+	spinner.style.display ="none";
 }
 
 function p(data){
